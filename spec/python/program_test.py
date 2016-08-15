@@ -1,27 +1,16 @@
-import os
-import sys
-
-path = os.path.dirname(os.path.realpath(__file__))
-print("test file path is " + path)
-path = path[:path.rfind("/")]
-path = path[:path.rfind("/")]
-print("adding module path: " + path);
-sys.path.append(path)
-
-
 import program as p
+import unittest
 
-if (p.add(99, 1) != 100):
-    sys.exit(1)
+class programTest(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(p.add(99, 1), 100, "program.add failed")
 
-if (p.sub(99, 50) != 49):
-    sys.exit(2)
+    def test_div(self):
+        self.assertAlmostEqual(p.div(15, 7), 2.14, 2, "program.div failed")
 
-if (p.mult(12, 10) != 120):
-    sys.exit(3)
+    def test_mult(self):
+        self.assertEqual(p.mult(12, 10), 120, "program.mult failed")
 
-if (p.div(12, 4) != 3):
-    sys.exit(4)
+    def test_sub(self):
+        self.assertEqual(p.sub(99, 50), 49, "program.sub failed")
 
-print("program_spec tests passed");
-sys.exit(0)

@@ -8,7 +8,7 @@ def mult(a, b):
   return a * b
 
 def div(a, b):
-  return a / b
+  return a / float(b)
 
 if __name__ == "__main__":
   a = 13
