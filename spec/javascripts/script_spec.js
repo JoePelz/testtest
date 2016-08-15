@@ -15,12 +15,12 @@ describe("Basic Arithmetic", function() {
   });
 
   it("has a midpoint function", function() {
-    expect(mid(2, 5, 8)).toBe(8);
-    expect(mid(2, 8, 5)).toBe(8);
-    expect(mid(5, 8, 2)).toBe(8);
-    expect(mid(5, 2, 8)).toBe(8);
-    expect(mid(8, 2, 5)).toBe(8);
-    expect(mid(8, 5, 2)).toBe(8);
+    expect(mid(2, 5, 8)).toBe(5);
+    expect(mid(2, 8, 5)).toBe(5);
+    expect(mid(5, 8, 2)).toBe(5);
+    expect(mid(5, 2, 8)).toBe(5);
+    expect(mid(8, 2, 5)).toBe(5);
+    expect(mid(8, 5, 2)).toBe(5);
   });
 });
 

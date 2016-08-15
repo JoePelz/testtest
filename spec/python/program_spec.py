@@ -2,15 +2,12 @@ import os
 import sys
 
 path = os.path.dirname(os.path.realpath(__file__))
-print("path is " + path)
+print("test file path is " + path)
 path = path[:path.rfind("/")]
 path = path[:path.rfind("/")]
-print("adding path: " + path);
+print("adding module path: " + path);
 sys.path.append(path)
 
-
-for i in sys.path:
-    print i
 
 import program as p
 
@@ -26,4 +23,5 @@ if (p.mult(12, 10) != 120):
 if (p.div(12, 4) != 3):
     sys.exit(4)
 
+print("program_spec tests passed");
 sys.exit(0)
